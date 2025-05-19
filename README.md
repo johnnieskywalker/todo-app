@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## npm Audit Vulnerabilities
+This project uses `react-scripts@5.0.1`, which reports vulnerabilities in `nth-check` and `postcss` during `npm audit`. These are build-time dependencies and do not affect the production application, as confirmed by the `create-react-app` team (see [GitHub issue #11174](https://github.com/facebook/create-react-app/issues/11174)). We’ve chosen to ignore them to avoid breaking changes from downgrading to `react-scripts@3.0.1`.
+
 ## Available Scripts
 
 In the project directory, you can run:
