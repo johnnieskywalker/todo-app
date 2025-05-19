@@ -54,15 +54,12 @@ describe('App', () => {
   it('passes addTask to TaskForm and handles form submission', async () => {
     render(<App />);
     
-    // Type in the task title
     const titleInput = screen.getByPlaceholderText('Enter task title');
     await userEvent.type(titleInput, 'New Task');
     
-    // Select status from dropdown
     const statusSelect = screen.getByRole('combobox');
     await userEvent.selectOptions(statusSelect, 'in progress');
     
-    // Submit the form
     const submitButton = screen.getByRole('button', { name: /add task/i });
     await userEvent.click(submitButton);
     
@@ -76,7 +73,6 @@ describe('App', () => {
       { id: '2', title: 'New Task', status: 'in progress' as TaskStatus },
     ];
     
-    // Mock the updated tasks
     mockUseTasks.mockReturnValue({
       tasks: updatedTasks,
       addTask: mockAddTask,
@@ -84,13 +80,9 @@ describe('App', () => {
     
     render(<App />);
     
-    // Get all list items
     const listItems = screen.getAllByRole('listitem');
     
-    // Check that we have the correct number of list items
     expect(listItems).toHaveLength(2);
-    
-    // Check that both tasks are rendered with correct content
     expect(listItems[0]).toHaveTextContent('Existing Task');
     expect(listItems[0]).toHaveTextContent('📝');
     expect(listItems[1]).toHaveTextContent('New Task');
