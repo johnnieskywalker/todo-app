@@ -9,7 +9,7 @@ export function useTasks() {
   const addTask = useCallback(
     (title: string, status: TaskStatus) => {
       taskService.addTask(title, status);
-      setTasks(taskService.getTasks()); // Refresh state from service
+      setTasks(taskService.getTasks());
     },
     [taskService]
   );

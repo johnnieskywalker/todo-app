@@ -8,36 +8,64 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The page will reload when you make changes.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in watch mode.\
+See [Testing](#-testing) below for more information.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ejects the app from Create React App, giving you full control over the configuration.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🧪 Testing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Test Structure
+
+Tests are organized to mirror the `src` directory structure with `__tests__` folders. We use:
+
+- **Jest** as the test runner
+- **React Testing Library** for component testing
+- **InversifyJS** for dependency injection in tests
+
+### Testing Approach
+
+1. **Unit Tests**: Test individual components and hooks in isolation
+2. **Integration Tests**: Test component interactions
+3. **Dependency Injection**: Use InversifyJS to mock dependencies
+
+### Running Tests
+
+- Run all tests: `npm test`
+- Run tests in watch mode: `npm test -- --watch`
+- Generate coverage report: `npm test -- --coverage`
+
+## 📦 Dependencies
+
+- React 18
+- TypeScript
+- InversifyJS
+- Jest
+- React Testing Library
+- ESLint + Prettier
+
+## 📚 Documentation
+
+- [React Documentation](https://reactjs.org/)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [InversifyJS Documentation](https://inversify.io/)
+- [Jest Documentation](https://jestjs.io/)
 
 ## Learn More
 
